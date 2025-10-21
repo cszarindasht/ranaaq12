@@ -179,10 +179,12 @@
         .logo-3d img {
             transition: all 0.4s ease;
             transform: translateZ(0);
+            filter: brightness(0) invert(1); /* لوگو را سفید می‌کند - فوق‌العاده برای تم آبی */
         }
 
         .logo-3d:hover img {
             transform: translateZ(50px) scale(1.2);
+            filter: brightness(0) invert(1) drop-shadow(0 4px 8px rgba(255,255,255,0.5)); /* افکت فوق‌العاده */
         }
 
         .btn-primary {
@@ -1150,6 +1152,7 @@
         .logo-text h1 {
             font-size: 1.3rem;
             white-space: nowrap;
+            color: white !important; /* تغییر به سفید */
         }
 
         .logo-text p {
@@ -1278,10 +1281,28 @@
         h2 {
             font-size: 22px !important;
             font-weight: 700 !important;
-            color: var(--primary-blue) !important;
+            color: white !important; /* تغییر به سفید برای هیرو و هدر */
             text-align: center;
             margin-bottom: 1rem !important;
             white-space: nowrap;
+        }
+
+        /* تغییر رنگ فونت h2 در بخش‌های رشته‌ها و هنرستان‌ها به مشکی */
+        #fields h2, #schools h2 {
+            color: #000000 !important;
+        }
+
+        .dark-mode #fields h2, .dark-mode #schools h2 {
+            color: var(--text-primary-dark) !important;
+        }
+
+        /* تغییر رنگ فونت در متن‌های داخل این بخش‌ها به مشکی */
+        #fields .heading-secondary, #schools .font-bold {
+            color: #000000 !important;
+        }
+
+        .dark-mode #fields .heading-secondary, .dark-mode #schools .font-bold {
+            color: var(--text-primary-dark) !important;
         }
 
         .dark-mode h2 {
@@ -1440,6 +1461,12 @@
                 margin: 0.5rem;
                 padding: 1rem;
             }
+
+            /* Responsive for squares grid - فول موبایل */
+            .grid.md\:grid-cols-2.lg\:grid-cols-5 {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 0.5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1545,6 +1572,25 @@
                 padding: 12px 20px;
                 font-size: 13px;
             }
+
+            /* فول رسپانسیو برای مربع‌ها در موبایل - تک ستونه */
+            .grid.md\:grid-cols-2.lg\:grid-cols-5 {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+            }
+
+            .square-btn {
+                height: 150px;
+                padding: 1rem;
+            }
+
+            .square-btn i {
+                font-size: 2rem;
+            }
+
+            .square-btn h3 {
+                font-size: 0.9rem;
+            }
         }
 
         /* بهبود رسپانسیو برای هدر */
@@ -1620,7 +1666,7 @@
         .logo-text h1 {
             font-size: 1.3rem;
             white-space: nowrap;
-            color: white;
+            color: white !important; /* تغییر به سفید */
         }
 
         .logo-text p {
@@ -1699,11 +1745,11 @@
             transform: scale(1.1) rotateY(10deg) rotateX(5deg);
         }
 
-        /* Hero Title Styles */
+        /* Hero Title Styles - سفید کردن */
         .hero-title {
             font-family: 'Vazirmatn', sans-serif;
             font-weight: 700;
-            color: white;
+            color: white !important; /* تغییر به سفید */
             text-align: center;
             line-height: 1.2;
         }
@@ -1717,6 +1763,27 @@
         @media (min-width: 769px) {
             .hero-title {
                 font-size: 3rem;
+            }
+        }
+
+        /* Grid for 5 squares - responsive */
+        .squares-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .squares-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .squares-grid {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
             }
         }
     </style>
@@ -1734,10 +1801,10 @@
                 <!-- Logo -->
                 <div class="flex items-center logo-text">
                     <div class="w-16 h-16 rounded-full flex items-center justify-center ml-4 bg-gradient-to-br from-accent-green to-green-800 shadow-lg">
-                        <img src="your-logo.png" alt="لوگو گروه کامپیوتر" class="w-14 h-14 object-contain" />
+                        <img src="your-logo.png" alt="لوگو گروه کامپیوتر" class="w-14 h-14 object-contain logo-3d" /> <!-- لوگوی سفید شده -->
                     </div>
                     <div>
-                        <h1 class="text-xl font-bold text-white"></h1>
+                        <h1 class="text-xl font-bold text-white">گروه کامپیوتر زرین دشت</h1> <!-- اضافه و سفید -->
                         <p class="text-sm text-gray-200">گروه کامپیوتر شهرستان زرین‌دشت</p>
                         <p class="text-sm text-gray-200">استان فارس</p>
                     </div>
@@ -1803,11 +1870,11 @@
     <section id="hero" class="hero-gradient text-white py-24 mx-4 rounded-3xl mb-4 relative">
         <div class="parallax-bg"></div>
         <div class="container mx-auto px-6 text-center relative z-10">
-            <h2 class="hero-title mb-6 animate-fade-in">گروه کامپیوتر شهرستان زرین دشت</h2>
+            <h2 class="hero-title mb-6 animate-fade-in">گروه کامپیوتر شهرستان زرین دشت</h2> <!-- سفید شده -->
             <h3 class="text-2xl md:text-3xl mb-4 animate-fade-in-delay-1">برای آینده‌سازان فناوری</h3>
             <h4 class="text-xl md:text-2xl mb-8 animate-fade-in-delay-2">دسترسی هوشمند</h4>
             
-            <!-- Large Logo with 3D Effect -->
+            <!-- Large Logo with 3D Effect - سفید و فوق‌العاده -->
             <div class="hero-logo-3d w-48 h-48 md:w-64 md:h-64 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto my-12 floating-card">
                 <img src="your-logo.png" alt="لوگو گروه کامپیوتر" class="w-44 h-44 md:w-60 md:h-60 object-contain" />
             </div>
@@ -2305,27 +2372,13 @@
         </div>
     </section>
 
-    <!-- Question Bank Section -->
-    <section id="bank" class="py-8 px-4 bg-white/5 dark:bg-slate-900/50">
-        <div class="container mx-auto text-center">
-            <h2 class="mb-6">
-                <i class="fas fa-question-circle ml-3"></i>
-                بانک سوالات
-            </h2>
-            <a href="bank.html" class="glass-card inline-block p-8 cursor-pointer max-w-md mx-auto" style="border-radius: 12px; text-decoration: none;">
-                <i class="fas fa-database text-4xl mb-4" style="color: var(--primary-blue);"></i>
-                <h3 class="font-bold text-xl mb-2">بانک سوالات</h3>
-                <p class="text-sm">دسترسی به بانک سوالات دروس</p>
-            </a>
-        </div>
-    </section>
-
-    <!-- Schools and Team Section - Combined -->
+    <!-- Schools and Team Section - Combined with Bank of Questions -->
     <section id="schools" class="py-4 px-4" style="background-color: var(--secondary-gray);">
         <div class="container mx-auto">
             <h2>هنرستان‌ها و اعضای گروه</h2>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <!-- Squares Grid - Now 5 items including Bank -->
+            <div class="squares-grid mb-8">
                 <!-- Schools Square -->
                 <div class="glass-card p-6 text-center cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-800 transition square-btn" onclick="window.location.href='schools.html'">
                     <i class="fas fa-school text-3xl mb-2" style="color: var(--primary-blue);"></i>
@@ -2348,6 +2401,12 @@
                 <div class="glass-card p-6 text-center cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-800 transition square-btn" onclick="window.location.href='useful.html'">
                     <i class="fas fa-link text-3xl mb-2" style="color: var(--accent-green);"></i>
                     <h3 class="font-bold mb-1">لینک‌های مفید</h3>
+                </div>
+
+                <!-- Bank of Questions Square - Added here -->
+                <div class="glass-card p-6 text-center cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-800 transition square-btn" onclick="window.location.href='bank.html'">
+                    <i class="fas fa-question-circle text-3xl mb-2" style="color: var(--primary-blue);"></i>
+                    <h3 class="font-bold mb-1">بانک سوالات</h3>
                 </div>
             </div>
 
@@ -2408,7 +2467,7 @@
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center items-center gap-4 mb-6">
                 <div class="w-16 h-16 rounded-full flex items-center justify-center bg-white/20">
-                    <img src="your-logo.png" alt="لوگو" class="w-14 h-14 object-contain" />
+                    <img src="your-logo.png" alt="لوگو" class="w-14 h-14 object-contain logo-3d" /> <!-- سفید شده -->
                 </div>
                 <div>
                     <h3 class="text-2xl font-bold">فن‌آموز زرین</h3>
