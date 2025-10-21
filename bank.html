@@ -1620,6 +1620,240 @@
                 height: 280px;
             }
         }
+
+        /* بهبودهای رسپانسیو اضافی برای فول رسپانسیو */
+        /* هیرو سکشن */
+        @media (max-width: 1024px) {
+            .hero-gradient {
+                padding: 3rem 1rem;
+            }
+            .hero-gradient h2 {
+                font-size: 1.8rem !important;
+                line-height: 1.3;
+            }
+            .hero-gradient h3 {
+                font-size: 1.4rem !important;
+            }
+            .hero-gradient p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-gradient {
+                padding: 2rem 0.5rem;
+                border-radius: 1rem;
+            }
+            .hero-gradient h2 {
+                font-size: 1.5rem !important;
+                margin-bottom: 1rem;
+            }
+            .hero-gradient h3 {
+                font-size: 1.2rem !important;
+                margin-bottom: 0.5rem;
+            }
+            .hero-gradient p {
+                font-size: 0.9rem;
+                padding: 0 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-gradient h2 {
+                font-size: 1.3rem !important;
+            }
+            .hero-gradient h3 {
+                font-size: 1.1rem !important;
+            }
+            .hero-gradient p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* بخش کتاب‌ها */
+        .book-section {
+            padding: 1.5rem;
+        }
+
+        .book-section h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .book-link {
+            font-size: 0.9rem;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .book-section {
+                padding: 1rem;
+            }
+            .book-section h4 {
+                font-size: 1rem;
+            }
+            .book-link {
+                font-size: 0.85rem;
+                padding: 0.6rem 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .book-section {
+                padding: 0.75rem;
+            }
+            .book-section h4 {
+                font-size: 0.95rem;
+            }
+            .book-link {
+                font-size: 0.8rem;
+                padding: 0.5rem 0.7rem;
+            }
+        }
+
+        /* جدول سوالات - رسپانسیو با اسکرول افقی */
+        .glass-card table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.8rem;
+        }
+
+        .glass-card th,
+        .glass-card td {
+            padding: 0.5rem 0.25rem;
+            text-align: right;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .glass-card thead {
+            background: rgba(2,136,209,0.1);
+        }
+
+        .glass-card tbody tr:hover {
+            background: rgba(2,136,209,0.05);
+        }
+
+        /* اسکرول افقی برای جدول در موبایل */
+        @media (max-width: 768px) {
+            .glass-card {
+                overflow-x: auto;
+            }
+            .glass-card table {
+                min-width: 600px; /* عرض حداقل برای جدول */
+                font-size: 0.75rem;
+            }
+            .glass-card th,
+            .glass-card td {
+                padding: 0.4rem 0.2rem;
+                min-width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .glass-card table {
+                min-width: 500px;
+                font-size: 0.7rem;
+            }
+            .glass-card th,
+            .glass-card td {
+                padding: 0.3rem 0.15rem;
+                min-width: 70px;
+            }
+        }
+
+        /* دکمه‌ها و لینک‌ها */
+        .ai-button {
+            width: auto;
+            min-width: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .ai-button {
+                min-width: 100%;
+                padding: 1rem;
+            }
+        }
+
+        /* هدر */
+        header {
+            padding: 1rem;
+        }
+
+        .logo-text {
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0.75rem;
+            }
+            .logo-text h1 {
+                font-size: 1.1rem;
+            }
+            .logo-text p {
+                font-size: 0.7rem;
+            }
+            nav.space-x-8 {
+                display: none; /* قبلاً hidden md:flex */
+            }
+        }
+
+        /* فوتر */
+        footer {
+            padding: 2rem 1rem;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 1.5rem 0.75rem;
+            }
+            footer h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            footer {
+                padding: 1rem 0.5rem;
+            }
+            footer h3 {
+                font-size: 1.1rem;
+            }
+            footer p {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* کانتینر کلی */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+        }
+
+        /* بهبودهای کلی برای RTL و رسپانسیو */
+        body[dir="rtl"] .course-link:hover,
+        body[dir="rtl"] .book-link:hover,
+        body[dir="rtl"] .video-link:hover {
+            transform: translateX(5px); /* معکوس برای RTL */
+        }
     </style>
 </head>
 <body class="light-mode transition-all duration-300">
@@ -1786,96 +2020,98 @@
             </h2>
 
             <div class="glass-card p-4 mb-4">
-                <table class="w-full text-xs">
-                    <thead>
-                        <tr class="border-b">
-                            <th class="text-right pr-2 py-2">منبع</th>
-                            <th class="text-right pr-2 py-2">توضیح (پایه/درس)</th>
-                            <th class="text-right pr-2 py-2">لینک دانلود/دسترسی</th>
-                            <th class="text-right pr-2 py-2">تعداد سوالات</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="pr-2 py-2">gama.ir</td>
-                            <td class="pr-2 py-2">دانش فنی پایه (پایه ۱۰، پودمان ۱-۵، ۱۴۰۴) + جواب تشریحی</td>
-                            <td class="pr-2 py-2"><a href="https://gama.ir/test/detail/139365" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۵۰+ سوال تستی/تشریحی</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">gama.ir</td>
-                            <td class="pr-2 py-2">امتحان پودمان ۴ دانش فنی تخصصی (پایه ۱۲، ۱۴۰۴، تحلیل شبکه‌های مجازی)</td>
-                            <td class="pr-2 py-2"><a href="https://gama.ir/test/detail/138375" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۳۰ سوال</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">gama.ir</td>
-                            <td class="pr-2 py-2">سوالات پودمان ۵ فناوری‌های نوین (پایه ۱۰، ۱۴۰۴، هوش مصنوعی)</td>
-                            <td class="pr-2 py-2"><a href="https://gama.ir/test/detail/135253" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۲۵ سوال + جواب</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">gama.ir</td>
-                            <td class="pr-2 py-2">مجموعه سوالات دانش فنی تخصصی (پایه ۱۲، پودمان ۱-۵، ۱۴۰۴)</td>
-                            <td class="pr-2 py-2"><a href="https://gama.ir/search?type=test&section=1178&base=1180&course=4373" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۳۱۵ سوال چهارگزینه‌ای</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">gama.ir</td>
-                            <td class="pr-2 py-2">سوالات جبرانی نوبت دوم دانش فنی پایه (پایه ۱۰، ۱۴۰۴)</td>
-                            <td class="pr-2 py-2"><a href="https://gama.ir/test/detail/94342" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۳۰-۳۵ سوال (صحیح/غلط + بلند)</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">irantooshe.ir</td>
-                            <td class="pr-2 py-2">نمونه‌سوالات دانش فنی تخصصی شبکه (پایه ۱۲، ۱۴۰۴، ۲۰ صفحه + جواب)</td>
-                            <td class="pr-2 py-2"><a href="https://irantooshe.ir/wp-content/uploads/2025/01/danesh-fani-takhasosi-shabake-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۴۰ سوال</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">irantooshe.ir</td>
-                            <td class="pr-2 py-2">سوالات نصب و نگهداری تجهیزات شبکه (پایه ۱۲، ۵ پودمان، ۱۴۰۴)</td>
-                            <td class="pr-2 py-2"><a href="https://irantooshe.ir/wp-content/uploads/2024/12/nasb-naghdari-shabake-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۵۰+ سوال</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">irantooshe.ir</td>
-                            <td class="pr-2 py-2">سوالات کنکور فنی کامپیوتر (پایه ۱۰-۱۲، ۱۴۰۴، ۶۰ تست)</td>
-                            <td class="pr-2 py-2"><a href="https://irantooshe.ir/wp-content/uploads/2025/02/konkor-fani-kamputer-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۶۰ تست</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">dabirfile.ir</td>
-                            <td class="pr-2 py-2">سوالات کاربر رایانه (پایه ۱۰، ۱۴۰۴، + جواب)</td>
-                            <td class="pr-2 py-2"><a href="https://dabirfile.ir/wp-content/uploads/2025/05/karbar-raiane-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۴۹ سوال</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">dabirfile.ir</td>
-                            <td class="pr-2 py-2">سوالات هماهنگ استانی هنرستان کامپیوتر (پایه ۱۱-۱۲، ۱۴۰۴)</td>
-                            <td class="pr-2 py-2"><a href="https://dabirfile.ir/wp-content/uploads/2025/03/honarestan-kamputer-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۱۰۰+ سوال</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">20begir.com</td>
-                            <td class="pr-2 py-2">سوالات ICDL و کاربر رایانه (پایه ۱۰، ۱۴۰۴، + جواب)</td>
-                            <td class="pr-2 py-2"><a href="https://20begir.com/wp-content/uploads/2025/08/icdl-fani-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۴۹۰ تست</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">kmt2.ir</td>
-                            <td class="pr-2 py-2">آرشیو کنکور فنی ۱۴۰۴ (تست طبقه‌بندی‌شده رشته کامپیوتر)</td>
-                            <td class="pr-2 py-2"><a href="https://kmt2.ir/wp-content/uploads/Soalat/fanni/KonkorFanni1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF کامل</a></td>
-                            <td class="pr-2 py-2">۲۰۰+ تست + تشریحی</td>
-                        </tr>
-                        <tr>
-                            <td class="pr-2 py-2">azmoonia.ir</td>
-                            <td class="pr-2 py-2">سوالات نصب و راه‌اندازی (پایه ۱۰، ۱۴۰۴، ۲۵ صفحه + جواب)</td>
-                            <td class="pr-2 py-2"><a href="https://azmoonia.ir/wp-content/uploads/2025/07/nasb-rah-andazi-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
-                            <td class="pr-2 py-2">۵۰ سوال</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="text-right pr-2 py-2">منبع</th>
+                                <th class="text-right pr-2 py-2">توضیح (پایه/درس)</th>
+                                <th class="text-right pr-2 py-2">لینک دانلود/دسترسی</th>
+                                <th class="text-right pr-2 py-2">تعداد سوالات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="pr-2 py-2">gama.ir</td>
+                                <td class="pr-2 py-2">دانش فنی پایه (پایه ۱۰، پودمان ۱-۵، ۱۴۰۴) + جواب تشریحی</td>
+                                <td class="pr-2 py-2"><a href="https://gama.ir/test/detail/139365" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۵۰+ سوال تستی/تشریحی</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">gama.ir</td>
+                                <td class="pr-2 py-2">امتحان پودمان ۴ دانش فنی تخصصی (پایه ۱۲، ۱۴۰۴، تحلیل شبکه‌های مجازی)</td>
+                                <td class="pr-2 py-2"><a href="https://gama.ir/test/detail/138375" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۳۰ سوال</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">gama.ir</td>
+                                <td class="pr-2 py-2">سوالات پودمان ۵ فناوری‌های نوین (پایه ۱۰، ۱۴۰۴، هوش مصنوعی)</td>
+                                <td class="pr-2 py-2"><a href="https://gama.ir/test/detail/135253" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۲۵ سوال + جواب</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">gama.ir</td>
+                                <td class="pr-2 py-2">مجموعه سوالات دانش فنی تخصصی (پایه ۱۲، پودمان ۱-۵، ۱۴۰۴)</td>
+                                <td class="pr-2 py-2"><a href="https://gama.ir/search?type=test&section=1178&base=1180&course=4373" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۳۱۵ سوال چهارگزینه‌ای</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">gama.ir</td>
+                                <td class="pr-2 py-2">سوالات جبرانی نوبت دوم دانش فنی پایه (پایه ۱۰، ۱۴۰۴)</td>
+                                <td class="pr-2 py-2"><a href="https://gama.ir/test/detail/94342" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۳۰-۳۵ سوال (صحیح/غلط + بلند)</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">irantooshe.ir</td>
+                                <td class="pr-2 py-2">نمونه‌سوالات دانش فنی تخصصی شبکه (پایه ۱۲، ۱۴۰۴، ۲۰ صفحه + جواب)</td>
+                                <td class="pr-2 py-2"><a href="https://irantooshe.ir/wp-content/uploads/2025/01/danesh-fani-takhasosi-shabake-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۴۰ سوال</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">irantooshe.ir</td>
+                                <td class="pr-2 py-2">سوالات نصب و نگهداری تجهیزات شبکه (پایه ۱۲، ۵ پودمان، ۱۴۰۴)</td>
+                                <td class="pr-2 py-2"><a href="https://irantooshe.ir/wp-content/uploads/2024/12/nasb-naghdari-shabake-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۵۰+ سوال</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">irantooshe.ir</td>
+                                <td class="pr-2 py-2">سوالات کنکور فنی کامپیوتر (پایه ۱۰-۱۲، ۱۴۰۴، ۶۰ تست)</td>
+                                <td class="pr-2 py-2"><a href="https://irantooshe.ir/wp-content/uploads/2025/02/konkor-fani-kamputer-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۶۰ تست</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">dabirfile.ir</td>
+                                <td class="pr-2 py-2">سوالات کاربر رایانه (پایه ۱۰، ۱۴۰۴، + جواب)</td>
+                                <td class="pr-2 py-2"><a href="https://dabirfile.ir/wp-content/uploads/2025/05/karbar-raiane-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۴۹ سوال</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">dabirfile.ir</td>
+                                <td class="pr-2 py-2">سوالات هماهنگ استانی هنرستان کامپیوتر (پایه ۱۱-۱۲، ۱۴۰۴)</td>
+                                <td class="pr-2 py-2"><a href="https://dabirfile.ir/wp-content/uploads/2025/03/honarestan-kamputer-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۱۰۰+ سوال</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">20begir.com</td>
+                                <td class="pr-2 py-2">سوالات ICDL و کاربر رایانه (پایه ۱۰، ۱۴۰۴، + جواب)</td>
+                                <td class="pr-2 py-2"><a href="https://20begir.com/wp-content/uploads/2025/08/icdl-fani-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۴۹۰ تست</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">kmt2.ir</td>
+                                <td class="pr-2 py-2">آرشیو کنکور فنی ۱۴۰۴ (تست طبقه‌بندی‌شده رشته کامپیوتر)</td>
+                                <td class="pr-2 py-2"><a href="https://kmt2.ir/wp-content/uploads/Soalat/fanni/KonkorFanni1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF کامل</a></td>
+                                <td class="pr-2 py-2">۲۰۰+ تست + تشریحی</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-2 py-2">azmoonia.ir</td>
+                                <td class="pr-2 py-2">سوالات نصب و راه‌اندازی (پایه ۱۰، ۱۴۰۴، ۲۵ صفحه + جواب)</td>
+                                <td class="pr-2 py-2"><a href="https://azmoonia.ir/wp-content/uploads/2025/07/nasb-rah-andazi-1404.pdf" target="_blank" class="text-blue-600 hover:underline">دانلود PDF</a></td>
+                                <td class="pr-2 py-2">۵۰ سوال</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <div class="ai-button-section mt-8">
